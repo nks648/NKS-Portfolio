@@ -104,7 +104,7 @@ const progressObserver = new IntersectionObserver((entries) => {
     setTimeout(() => { fill.style.width = targetWidth + '%'; }, 200);
     progressObserver.unobserve(fill);
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.1 });
 
 progressFills.forEach(el => progressObserver.observe(el));
 document.querySelectorAll('.lang-bar-fill').forEach(el => progressObserver.observe(el));

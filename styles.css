@@ -1103,6 +1103,12 @@ img { display: block; max-width: 100%; }
   transition: all var(--transition);
 }
 
+.contact-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 .contact-card:hover {
   border-color: rgba(79, 158, 255, 0.35);
   background: var(--surface-2);
