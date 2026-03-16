@@ -114,11 +114,11 @@ document.querySelectorAll('.lang-bar-fill').forEach(el => progressObserver.obser
 // ================================
 // Add photos to the /photos/ folder and list them here:
 const GALLERY_PHOTOS = [
+  { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: '' },
   { src: 'photos/IMG_0803.jpeg', caption: '' },
   { src: 'photos/IMG_5738.jpeg', caption: '' },
   { src: 'photos/IMG_7858.jpeg', caption: '' },
   { src: 'photos/IMG_9552.jpeg', caption: '' },
-  { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: '' },
 ];
 
 // Placeholder cards shown until real photos are added
