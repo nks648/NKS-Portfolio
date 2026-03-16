@@ -56,6 +56,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#languages">Languages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
       <button class="burger" id="burger" aria-label="Toggle menu">
@@ -73,6 +74,7 @@
       <li><a href="#skills" class="mobile-link">Skills</a></li>
       <li><a href="#education" class="mobile-link">Education</a></li>
       <li><a href="#languages" class="mobile-link">Languages</a></li>
+      <li><a href="#gallery" class="mobile-link">Gallery</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
   </div>
@@ -528,10 +530,32 @@
     </div>
   </section>
 
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-label">07 — Gallery</div>
+      <h2 class="section-title">Photo <span class="accent">Gallery</span></h2>
+      <p class="gallery-hint">Drag · swipe · click to browse</p>
+      <div class="coverflow-wrap">
+        <div class="coverflow-stage" id="cfStage"></div>
+        <div class="cf-nav">
+          <button class="cf-btn" id="cfPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="cf-dots" id="cfDots"></div>
+          <button class="cf-btn" id="cfNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <p class="cf-caption" id="cfCaption"></p>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
-  <section id="contact" class="section">
+  <section id="contact" class="section section-dark">
     <div class="container contact-container">
-      <div class="section-label">07 — Contact</div>
+      <div class="section-label">08 — Contact</div>
       <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
       <p class="contact-sub">Open to SAP project management and ERP transformation opportunities globally. Reach out via LinkedIn or explore my work on GitHub.</p>
       <div class="contact-cards">
