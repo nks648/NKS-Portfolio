@@ -110,8 +110,9 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-logo-img {
-  height: 36px;
+  height: 24px;
   width: auto;
+  max-width: 80px;
   display: block;
   object-fit: contain;
 }
