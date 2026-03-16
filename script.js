@@ -107,3 +107,4 @@ const progressObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 progressFills.forEach(el => progressObserver.observe(el));
+document.querySelectorAll('.lang-bar-fill').forEach(el => progressObserver.observe(el));
