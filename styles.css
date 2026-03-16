@@ -109,6 +109,13 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.05em;
 }
 
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .nav-links {
   display: flex;
   gap: 8px;
