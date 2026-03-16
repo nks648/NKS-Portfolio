@@ -110,6 +110,22 @@ progressFills.forEach(el => progressObserver.observe(el));
 document.querySelectorAll('.lang-bar-fill').forEach(el => progressObserver.observe(el));
 
 // ================================
+// BACK TO TOP
+// ================================
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  const heroEl = document.getElementById('hero');
+  const heroVisibility = new IntersectionObserver((entries) => {
+    backToTop.classList.toggle('visible', !entries[0].isIntersecting);
+  }, { threshold: 0 });
+  heroVisibility.observe(heroEl);
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ================================
 // PHOTO GALLERY — COVER FLOW
 // ================================
 // Add photos to the /photos/ folder and list them here:
