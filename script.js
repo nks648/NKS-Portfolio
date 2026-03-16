@@ -90,3 +90,20 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 statNums.forEach(el => statsObserver.observe(el));
+
+// ================================
+// SAP PROGRESS BARS
+// ================================
+const progressFills = document.querySelectorAll('.sap-progress-fill');
+
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const fill = entry.target;
+    const targetWidth = fill.getAttribute('data-width');
+    setTimeout(() => { fill.style.width = targetWidth + '%'; }, 200);
+    progressObserver.unobserve(fill);
+  });
+}, { threshold: 0.4 });
+
+progressFills.forEach(el => progressObserver.observe(el));
