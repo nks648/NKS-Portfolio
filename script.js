@@ -1,28 +1,30 @@
 // ================================
-// NAV: scroll state + mobile menu
+// NAV: scroll + mobile
 // ================================
 const navbar = document.getElementById('navbar');
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
-const mobileLinks = document.querySelectorAll('.mobile-link');
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
 });
 
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  const open = mobileMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
 });
 
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
 });
 
 // ================================
 // SCROLL ANIMATIONS
 // ================================
-const animatedEls = document.querySelectorAll('[data-animate]');
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -30,80 +32,75 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-animatedEls.forEach(el => observer.observe(el));
+document.querySelectorAll('[data-animate], .tl-item, .skill-apple-card, .edu-apple-card').forEach(el => {
+  observer.observe(el);
+});
+
+// Stagger children of sap-cards
+document.querySelectorAll('.sap-apple-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.1}s`;
+  observer.observe(card);
+});
 
 // ================================
-// ACTIVE NAV LINK ON SCROLL
+// SAP PROGRESS BARS (triggered on visibility)
 // ================================
-const sections = document.querySelectorAll('section[id]');
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const fill = entry.target;
+    const target = fill.getAttribute('data-width');
+    setTimeout(() => { fill.style.width = target + '%'; }, 300);
+    progressObserver.unobserve(fill);
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('.sap-progress-fill').forEach(el => progressObserver.observe(el));
+
+// ================================
+// COUNTER ANIMATION
+// ================================
+function countUp(el, target, suffix) {
+  const dur = 1600;
+  const start = performance.now();
+  const step = (now) => {
+    const t = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const raw = el.textContent.trim();
+    if (raw === '8+') countUp(el, 8, '+');
+    else if (raw === '98%') countUp(el, 98, '%');
+    else if (raw === '4') countUp(el, 4, '');
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll('.stat-big').forEach(el => statObserver.observe(el));
+
+// ================================
+// ACTIVE NAV HIGHLIGHT
+// ================================
 const navAnchors = document.querySelectorAll('.nav-links a');
-
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navAnchors.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        a.style.color = a.getAttribute('href') === '#' + entry.target.id
+          ? 'var(--text)' : '';
       });
     }
   });
 }, { rootMargin: '-40% 0px -55% 0px' });
 
-sections.forEach(s => sectionObserver.observe(s));
-
-// ================================
-// SMOOTH COUNTER ANIMATION
-// ================================
-function animateCounter(el, target, suffix = '') {
-  const duration = 1400;
-  const start = performance.now();
-  const isFloat = String(target).includes('.');
-
-  const step = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = isFloat
-      ? (eased * target).toFixed(1)
-      : Math.round(eased * target);
-    el.textContent = current + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  };
-
-  requestAnimationFrame(step);
-}
-
-const statNums = document.querySelectorAll('.stat-num');
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const el = entry.target;
-    const raw = el.textContent.trim();
-
-    if (raw === '8+') animateCounter(el, 8, '+');
-    else if (raw === '€200K') { el.textContent = '€200K'; }
-    else if (raw === '98%') animateCounter(el, 98, '%');
-    else if (raw === '4') animateCounter(el, 4, '');
-
-    statsObserver.unobserve(el);
-  });
-}, { threshold: 0.5 });
-
-statNums.forEach(el => statsObserver.observe(el));
-
-// ================================
-// SAP PROGRESS BARS
-// ================================
-const progressFills = document.querySelectorAll('.sap-progress-fill');
-
-const progressObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const fill = entry.target;
-    const targetWidth = fill.getAttribute('data-width');
-    setTimeout(() => { fill.style.width = targetWidth + '%'; }, 200);
-    progressObserver.unobserve(fill);
-  });
-}, { threshold: 0.4 });
-
-progressFills.forEach(el => progressObserver.observe(el));
+document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));

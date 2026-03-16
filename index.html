@@ -3,17 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nagarjun K S — SAP Project Manager</title>
+
+  <!-- SEO: Primary -->
+  <title>Nagarjun KS | SAP Project Manager Munich | PMP® Certified ERP Expert</title>
+  <meta name="description" content="Nagarjun Kogaravalli Sathyanarayana — PMP® certified SAP Project Manager based in Munich (Ottobrunn), Germany. 8+ years leading SAP S/4HANA (MM, EWM, PP) transformations in aerospace and high-tech manufacturing. Open to PM opportunities in Munich and Bavaria." />
+  <meta name="keywords" content="SAP Project Manager Munich, ERP Project Manager Bavaria, SAP S4HANA Munich, PMP certified Munich, SAP MM EWM PP, Isar Aerospace SAP, SAP Activate Munich, project manager aerospace Germany" />
+  <meta name="author" content="Nagarjun Kogaravalli Sathyanarayana" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nks648.github.io/NKS-Portfolio/" />
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Nagarjun KS | SAP Project Manager Munich" />
+  <meta property="og:description" content="PMP® certified SAP Project Manager with 8+ years in SAP S/4HANA transformations. Based in Munich. Currently leading MM, EWM & PP rollout at Isar Aerospace SE." />
+  <meta property="og:url" content="https://nks648.github.io/NKS-Portfolio/" />
+  <meta property="og:image" content="https://nks648.github.io/NKS-Portfolio/profile.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nagarjun KS | SAP Project Manager Munich" />
+  <meta name="twitter:description" content="PMP® certified SAP Project Manager. 8+ years in SAP S/4HANA. Based in Munich, Germany." />
+  <meta name="twitter:image" content="https://nks648.github.io/NKS-Portfolio/profile.jpg" />
+
+  <!-- SEO: Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nagarjun Kogaravalli Sathyanarayana",
+    "alternateName": "Nagarjun KS",
+    "jobTitle": "SAP Project Manager",
+    "description": "PMP® certified SAP Project Manager with 8+ years in SAP S/4HANA transformations across aerospace and high-tech manufacturing in Munich, Germany.",
+    "url": "https://nks648.github.io/NKS-Portfolio/",
+    "image": "https://nks648.github.io/NKS-Portfolio/profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/nagarjunkogaravallisathyanarayana",
+      "https://github.com/nks648"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Munich",
+      "addressRegion": "Bavaria",
+      "addressCountry": "DE"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Isar Aerospace SE"
+    },
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "Project Management Professional (PMP)®", "recognizedBy": { "@type": "Organization", "name": "Project Management Institute" } },
+      { "@type": "EducationalOccupationalCredential", "name": "Certified Associate in Project Management (CAPM)®", "recognizedBy": { "@type": "Organization", "name": "Project Management Institute" } }
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "RWTH Aachen University" }
+    ],
+    "knowsAbout": ["SAP S/4HANA", "SAP MM", "SAP EWM", "SAP PP", "Project Management", "ERP Implementation", "Agile", "SAP Activate", "Power BI", "Supply Chain Management"]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAV -->
-  <nav id="navbar">
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <span class="nav-logo">NKS</span>
+      <a href="#hero" class="nav-logo" aria-label="Home">NKS</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#sap-tracker">SAP Modules</a></li>
@@ -22,14 +80,14 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Toggle menu">
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul>
       <li><a href="#about" class="mobile-link">About</a></li>
       <li><a href="#sap-tracker" class="mobile-link">SAP Modules</a></li>
@@ -41,386 +99,484 @@
   </div>
 
   <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="hero-tag"><span class="dot"></span> Open to new opportunities</p>
-        <h1 class="hero-name">Nagarjun<br /><span class="accent">Kogaravalli</span><br />Sathyanarayana</h1>
-        <p class="hero-role">SAP Project Manager <span class="sep">·</span> PMP® Certified</p>
-        <p class="hero-sub">8+ years delivering SAP S/4HANA transformations in aerospace and high-tech manufacturing — end to end, from process design to go-live at Isar Aerospace.</p>
-        <div class="hero-actions">
-          <a href="#experience" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-          <a href="NKS_Resume.pdf" download="Nagarjun_KS_Resume.pdf" class="btn btn-download">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Resume
-          </a>
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="hero-location-pin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Munich, Germany
+        </span>
+        <span class="hero-status"><span class="status-dot"></span> Open to opportunities</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="hero-name-line">Nagarjun</span>
+        <span class="hero-name-line hero-name-accent">Kogaravalli</span>
+        <span class="hero-name-line">Sathyanarayana</span>
+      </h1>
+
+      <p class="hero-title">SAP Project Manager &amp; ERP Product Owner</p>
+      <p class="hero-sub">8+ years delivering SAP S/4HANA transformations in<br class="hero-br"/> aerospace manufacturing — Munich, Germany.</p>
+
+      <div class="hero-ctas">
+        <a href="#experience" class="btn-apple-primary">View Experience</a>
+        <a href="NKS_Resume.pdf" download="Nagarjun_KS_Resume.pdf" class="btn-apple-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+
+      <!-- PHOTO -->
+      <div class="hero-photo-section">
+        <div class="hero-photo-frame">
+          <img src="profile.jpg" alt="Nagarjun Kogaravalli Sathyanarayana — SAP Project Manager Munich" width="320" height="320" />
+          <div class="hero-photo-caption">
+            <span class="pmp-badge">PMP®</span>
+            <span class="photo-caption-text">SAP Project Manager · Munich</span>
+          </div>
         </div>
-        <div class="hero-links">
-          <a href="https://www.linkedin.com/in/nagarjunkogaravallisathyanarayana" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://github.com/nks648" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          </a>
+
+        <!-- Floating stat cards -->
+        <div class="float-card float-card-1" aria-hidden="true">
+          <span class="float-num">8+</span>
+          <span class="float-label">Years in ERP</span>
+        </div>
+        <div class="float-card float-card-2" aria-hidden="true">
+          <span class="float-num">98%</span>
+          <span class="float-label">Data Fidelity</span>
+        </div>
+        <div class="float-card float-card-3" aria-hidden="true">
+          <div class="float-modules">
+            <span class="mod-tag mod-done">MM ✓</span>
+            <span class="mod-tag mod-done">EWM ✓</span>
+            <span class="mod-tag mod-wip">PP ●</span>
+          </div>
+          <span class="float-label">S/4HANA Modules</span>
         </div>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring"></div>
-        <div class="hero-photo">
-          <img src="profile.jpg" alt="Nagarjun Kogaravalli Sathyanarayana" />
-        </div>
-        <div class="hero-photo-badge">
-          <span class="badge-icon">✓</span>
-          <span>PMP® Certified</span>
-        </div>
-      </div>
     </div>
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+
+    <!-- Munich skyline SVG -->
+    <div class="hero-skyline" aria-hidden="true">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Frauenkirche twin towers -->
+        <rect x="180" y="60" width="18" height="100" fill="currentColor" opacity="0.06"/>
+        <polygon points="180,60 189,40 198,60" fill="currentColor" opacity="0.06"/>
+        <rect x="210" y="60" width="18" height="100" fill="currentColor" opacity="0.06"/>
+        <polygon points="210,60 219,40 228,60" fill="currentColor" opacity="0.06"/>
+        <!-- Buildings -->
+        <rect x="250" y="90" width="40" height="70" fill="currentColor" opacity="0.04"/>
+        <rect x="300" y="70" width="30" height="90" fill="currentColor" opacity="0.05"/>
+        <rect x="340" y="100" width="50" height="60" fill="currentColor" opacity="0.04"/>
+        <rect x="400" y="80" width="25" height="80" fill="currentColor" opacity="0.05"/>
+        <rect x="430" y="110" width="60" height="50" fill="currentColor" opacity="0.03"/>
+        <rect x="500" y="60" width="20" height="100" fill="currentColor" opacity="0.05"/>
+        <rect x="530" y="85" width="45" height="75" fill="currentColor" opacity="0.04"/>
+        <!-- Olympic Tower -->
+        <rect x="900" y="20" width="8" height="140" fill="currentColor" opacity="0.07"/>
+        <circle cx="904" cy="18" r="12" fill="currentColor" opacity="0.06"/>
+        <!-- More buildings right -->
+        <rect x="960" y="75" width="35" height="85" fill="currentColor" opacity="0.04"/>
+        <rect x="1005" y="90" width="50" height="70" fill="currentColor" opacity="0.04"/>
+        <rect x="1065" y="65" width="28" height="95" fill="currentColor" opacity="0.05"/>
+        <rect x="1100" y="100" width="60" height="60" fill="currentColor" opacity="0.03"/>
+        <rect x="1170" y="80" width="30" height="80" fill="currentColor" opacity="0.05"/>
+        <rect x="1210" y="55" width="22" height="105" fill="currentColor" opacity="0.06"/>
+        <rect x="1240" y="95" width="45" height="65" fill="currentColor" opacity="0.04"/>
+      </svg>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-label">01 — About</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-title">Turning complex IT transformations into <span class="accent">measurable outcomes</span></h2>
-          <p>PMP® certified SAP Project Manager with over 8 years delivering end-to-end ERP transformations across aerospace and high-tech manufacturing. I bridge the gap between business process design and technical delivery — owning the full SAP S/4HANA lifecycle from requirements to post-go-live adoption.</p>
-          <p>Currently leading production operations transformation at <strong>Isar Aerospace SE</strong> as ERP Product Owner, where I've driven MM and EWM to successful go-live, and am steering PP implementation — all within a €200K annual budget, managing an offshore team and 5+ executive stakeholders.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">8+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">€200K</span>
-              <span class="stat-label">Annual Budget Managed</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">98%</span>
-              <span class="stat-label">Data Fidelity Achieved</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">4</span>
-              <span class="stat-label">Concurrent Programmes</span>
+  <section id="about" class="section-apple" aria-labelledby="about-heading">
+    <div class="apple-container">
+      <p class="apple-eyebrow">About</p>
+      <h2 id="about-heading" class="apple-headline">Bridging strategy and<br/>technical <em>delivery</em>.</h2>
+
+      <div class="about-layout">
+        <div class="about-copy">
+          <p class="about-lead">PMP® certified SAP Project Manager with over <strong>8 years</strong> delivering end-to-end ERP transformations in aerospace and high-tech manufacturing — currently based in <strong>Munich, Bavaria</strong>.</p>
+          <p>At Isar Aerospace SE in Ottobrunn, I lead SAP S/4HANA implementation as ERP Product Owner — managing cross-functional teams, offshore delivery partners, and steering committee reporting across MM, EWM, and PP modules.</p>
+          <p>My background spans process design, systems engineering, and supply chain — giving me the rare ability to translate complex business requirements into executable SAP solutions.</p>
+
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/nagarjunkogaravallisathyanarayana" target="_blank" rel="noopener" class="about-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn Profile
+            </a>
+            <a href="https://github.com/nks648" target="_blank" rel="noopener" class="about-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-tile">
+            <span class="stat-big">8+</span>
+            <span class="stat-desc">Years delivering ERP transformations</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-big">€200K</span>
+            <span class="stat-desc">Annual SAP project budget managed</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-big">98%</span>
+            <span class="stat-desc">PLM to S/4HANA data fidelity</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-big">4</span>
+            <span class="stat-desc">Concurrent transformation programmes</span>
+          </div>
+
+          <!-- Munich location tile -->
+          <div class="stat-tile stat-tile-wide stat-tile-munich">
+            <div class="munich-inner">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Munich, Bavaria</strong>
+                <span>Available for on-site &amp; hybrid roles</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="about-certs">
-          <h3>Certifications</h3>
-          <ul class="cert-list">
-            <li>
-              <a href="https://www.credly.com/badges/38cb125e-83bb-4826-99b3-4a5e8f37130d/public_url" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">PMP</div>
-                <div>
-                  <strong>Project Management Professional (PMP)®</strong>
-                  <span>Project Management Institute</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.credly.com/badges/37a94df7-5e01-4ac1-9fe2-7a0222932bf6/linked_in_profile" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">CAPM</div>
-                <div>
-                  <strong>Certified Associate in Project Management (CAPM)®</strong>
-                  <span>Project Management Institute</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.credly.com/badges/ed8341d7-7d7e-4801-a211-a62a43a51e2a/linked_in_profile" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">SCM</div>
-                <div>
-                  <strong>Supply Chain Procurement Certificate</strong>
-                  <span>ASCM</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">PM</div>
-                <div>
-                  <strong>Google Project Management Specialisation</strong>
-                  <span>Google / Coursera</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.credly.com/badges/27e3bcd1-470d-483a-8c80-302fcc422ce9/linked_in_profile" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">AI</div>
-                <div>
-                  <strong>Generative AI Overview for Project Managers</strong>
-                  <span>Project Management Institute</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://achievements.wharton.upenn.edu/7ac33964-fbc2-40f8-9040-17d0cb4ab753#acc.udYzaTGx" target="_blank" rel="noopener" class="cert-link">
-                <div class="cert-icon">W</div>
-                <div>
-                  <strong>Leadership in the 21st Century</strong>
-                  <span>Wharton Online</span>
-                </div>
-                <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </li>
-          </ul>
+      </div>
+
+      <!-- Certifications -->
+      <div class="certs-section">
+        <h3 class="certs-heading">Verified Certifications</h3>
+        <div class="certs-grid">
+          <a href="https://www.credly.com/badges/38cb125e-83bb-4826-99b3-4a5e8f37130d/public_url" target="_blank" rel="noopener" class="cert-card" aria-label="PMP certification on Credly">
+            <div class="cert-card-icon cert-pmi">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>PMP®</strong>
+              <span>Project Management Professional</span>
+              <span class="cert-issuer">PMI · Verified on Credly</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a href="https://www.credly.com/badges/37a94df7-5e01-4ac1-9fe2-7a0222932bf6/linked_in_profile" target="_blank" rel="noopener" class="cert-card" aria-label="CAPM certification on Credly">
+            <div class="cert-card-icon cert-pmi">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>CAPM®</strong>
+              <span>Certified Associate in Project Management</span>
+              <span class="cert-issuer">PMI · Verified on Credly</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a href="https://www.credly.com/badges/ed8341d7-7d7e-4801-a211-a62a43a51e2a/linked_in_profile" target="_blank" rel="noopener" class="cert-card" aria-label="ASCM certification on Credly">
+            <div class="cert-card-icon cert-ascm">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>ASCM SCM</strong>
+              <span>Supply Chain Procurement Certificate</span>
+              <span class="cert-issuer">ASCM · Verified on Credly</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a href="https://www.credly.com/badges/27e3bcd1-470d-483a-8c80-302fcc422ce9/linked_in_profile" target="_blank" rel="noopener" class="cert-card" aria-label="PMI Generative AI certification on Credly">
+            <div class="cert-card-icon cert-ai">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>Gen AI for PMs</strong>
+              <span>Generative AI Overview for Project Managers</span>
+              <span class="cert-issuer">PMI · Verified on Credly</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a href="https://achievements.wharton.upenn.edu/7ac33964-fbc2-40f8-9040-17d0cb4ab753#acc.udYzaTGx" target="_blank" rel="noopener" class="cert-card" aria-label="Wharton Leadership certificate">
+            <div class="cert-card-icon cert-wharton">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>Wharton Leadership</strong>
+              <span>Leadership in the 21st Century</span>
+              <span class="cert-issuer">Wharton Online · Verified</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+
+          <a href="https://www.coursera.org/professional-certificates/google-project-management" target="_blank" rel="noopener" class="cert-card" aria-label="Google Project Management certificate">
+            <div class="cert-card-icon cert-google">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="cert-card-body">
+              <strong>Google PM</strong>
+              <span>Project Management Specialisation</span>
+              <span class="cert-issuer">Google / Coursera</span>
+            </div>
+            <svg class="cert-ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SAP MODULE TRACKER -->
-  <section id="sap-tracker" class="section section-dark">
-    <div class="container">
-      <div class="section-label">02 — SAP S/4HANA Implementation</div>
-      <h2 class="section-title">Live Implementation <span class="accent">Status</span></h2>
-      <p class="tracker-intro">Currently leading the full SAP S/4HANA rollout at Isar Aerospace SE across three core modules — each with distinct scope, complexity, and delivery milestone.</p>
-      <div class="sap-modules">
+  <section id="sap-tracker" class="section-apple section-gray" aria-labelledby="sap-heading">
+    <div class="apple-container">
+      <p class="apple-eyebrow">SAP S/4HANA</p>
+      <h2 id="sap-heading" class="apple-headline">Live implementation.<br/><em>Three modules. Real results.</em></h2>
+      <p class="apple-subhead">Leading the full SAP S/4HANA rollout at Isar Aerospace SE across Materials Management, Extended Warehouse Management, and Production Planning.</p>
 
-        <div class="sap-card sap-done" data-animate>
-          <div class="sap-status-bar"></div>
-          <div class="sap-card-inner">
-            <div class="sap-header">
-              <div class="sap-module-code">MM</div>
-              <span class="sap-badge sap-badge-done">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
-                Go-Live Complete
-              </span>
-            </div>
-            <h3>Materials Management</h3>
-            <p>Full end-to-end MM implementation delivered — covering procurement workflows, purchase order management, goods receipt, invoice verification, and inventory valuation. PLM/PDM integration achieving 98% data fidelity.</p>
-            <div class="sap-highlights">
-              <span>Procurement Workflows</span>
-              <span>Inventory Valuation</span>
-              <span>PLM/PDM Integration</span>
-              <span>Vendor Management</span>
-            </div>
-            <div class="sap-progress-wrap">
-              <div class="sap-progress-label"><span>Implementation Progress</span><span>100%</span></div>
-              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="100"></div></div>
-            </div>
-          </div>
-        </div>
+      <!-- Module status visual -->
+      <div class="sap-visual" aria-hidden="true">
+        <svg viewBox="0 0 760 120" class="sap-pipeline-svg" xmlns="http://www.w3.org/2000/svg">
+          <!-- Connection line -->
+          <line x1="120" y1="60" x2="640" y2="60" stroke="#d1d1d6" stroke-width="2" stroke-dasharray="6 4"/>
+          <!-- MM node -->
+          <circle cx="120" cy="60" r="40" fill="#34c759" opacity="0.15"/>
+          <circle cx="120" cy="60" r="30" fill="#34c759"/>
+          <text x="120" y="65" text-anchor="middle" fill="white" font-weight="700" font-size="13" font-family="system-ui">MM</text>
+          <text x="120" y="115" text-anchor="middle" fill="#1d1d1f" font-size="11" font-family="system-ui">Go-Live ✓</text>
+          <!-- EWM node -->
+          <circle cx="380" cy="60" r="40" fill="#34c759" opacity="0.15"/>
+          <circle cx="380" cy="60" r="30" fill="#34c759"/>
+          <text x="380" y="65" text-anchor="middle" fill="white" font-weight="700" font-size="13" font-family="system-ui">EWM</text>
+          <text x="380" y="115" text-anchor="middle" fill="#1d1d1f" font-size="11" font-family="system-ui">Done ✓</text>
+          <!-- PP node (in progress) -->
+          <circle cx="640" cy="60" r="40" fill="#ff9f0a" opacity="0.15"/>
+          <circle cx="640" cy="60" r="30" fill="#ff9f0a"/>
+          <text x="640" y="65" text-anchor="middle" fill="white" font-weight="700" font-size="13" font-family="system-ui">PP</text>
+          <text x="640" y="115" text-anchor="middle" fill="#1d1d1f" font-size="11" font-family="system-ui">In Progress</text>
+        </svg>
+      </div>
 
-        <div class="sap-card sap-done" data-animate>
-          <div class="sap-status-bar"></div>
-          <div class="sap-card-inner">
-            <div class="sap-header">
-              <div class="sap-module-code">EWM</div>
-              <span class="sap-badge sap-badge-done">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
-                Implementation Done
-              </span>
-            </div>
-            <h3>Extended Warehouse Management</h3>
-            <p>EWM fully implemented and operational — warehouse structure, storage types, transfer orders, and goods movement processes configured and live. MES architecture integration established for real-time stock visibility.</p>
-            <div class="sap-highlights">
-              <span>Warehouse Structure</span>
-              <span>Transfer Orders</span>
-              <span>MES Integration</span>
-              <span>Real-time Visibility</span>
-            </div>
-            <div class="sap-progress-wrap">
-              <div class="sap-progress-label"><span>Implementation Progress</span><span>100%</span></div>
-              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="100"></div></div>
-            </div>
-          </div>
-        </div>
+      <div class="sap-cards">
 
-        <div class="sap-card sap-ongoing" data-animate>
-          <div class="sap-status-bar"></div>
-          <div class="sap-card-inner">
-            <div class="sap-header">
-              <div class="sap-module-code">PP</div>
-              <span class="sap-badge sap-badge-ongoing">
-                <span class="sap-pulse"></span>
-                In Progress
-              </span>
-            </div>
-            <h3>Production Planning</h3>
-            <p>Currently in active implementation — defining production order management, capacity planning, MRP configuration, and shop floor control processes. Coordinating blueprint workshops with production and quality teams.</p>
-            <div class="sap-highlights">
-              <span>Production Orders</span>
-              <span>Capacity Planning</span>
-              <span>MRP Configuration</span>
-              <span>Shop Floor Control</span>
-            </div>
-            <div class="sap-progress-wrap">
-              <div class="sap-progress-label"><span>Implementation Progress</span><span>~60%</span></div>
-              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="60"></div></div>
-            </div>
+        <article class="sap-apple-card sap-complete">
+          <div class="sap-apple-header">
+            <div class="sap-module-badge sap-badge-green">MM</div>
+            <span class="sap-status-pill sap-pill-green">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Go-Live Complete
+            </span>
           </div>
-        </div>
+          <h3>Materials Management</h3>
+          <p>Full MM implementation delivered — procurement workflows, purchase order management, goods receipt, invoice verification, and inventory valuation. PLM/PDM integration achieved <strong>98% data fidelity</strong>, eliminating critical operational errors.</p>
+          <ul class="sap-feature-list">
+            <li>Procurement process standardisation</li>
+            <li>PLM/PDM → S/4HANA integration</li>
+            <li>Vendor evaluation &amp; onboarding</li>
+            <li>Inventory valuation &amp; reporting</li>
+          </ul>
+          <div class="sap-progress-bar">
+            <div class="sap-progress-fill sap-fill-green" data-width="100"></div>
+          </div>
+          <div class="sap-progress-meta"><span>Completion</span><span>100%</span></div>
+        </article>
+
+        <article class="sap-apple-card sap-complete">
+          <div class="sap-apple-header">
+            <div class="sap-module-badge sap-badge-green">EWM</div>
+            <span class="sap-status-pill sap-pill-green">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Implementation Done
+            </span>
+          </div>
+          <h3>Extended Warehouse Management</h3>
+          <p>EWM fully implemented and operational — warehouse structure, storage types, transfer orders, and goods movement configured. MES architecture integration established for real-time stock visibility across the Ottobrunn facility.</p>
+          <ul class="sap-feature-list">
+            <li>Warehouse structure &amp; storage types</li>
+            <li>Transfer order management</li>
+            <li>MES architecture integration</li>
+            <li>Real-time stock visibility</li>
+          </ul>
+          <div class="sap-progress-bar">
+            <div class="sap-progress-fill sap-fill-green" data-width="100"></div>
+          </div>
+          <div class="sap-progress-meta"><span>Completion</span><span>100%</span></div>
+        </article>
+
+        <article class="sap-apple-card sap-inprogress">
+          <div class="sap-apple-header">
+            <div class="sap-module-badge sap-badge-amber">PP</div>
+            <span class="sap-status-pill sap-pill-amber">
+              <span class="pulse-dot"></span>
+              In Progress
+            </span>
+          </div>
+          <h3>Production Planning</h3>
+          <p>Active implementation underway — defining production order management, capacity planning, MRP configuration, and shop floor control. Conducting blueprint workshops with production and quality stakeholders to finalise solution design.</p>
+          <ul class="sap-feature-list">
+            <li>Production order management</li>
+            <li>Capacity planning &amp; MRP</li>
+            <li>Shop floor control</li>
+            <li>Quality integration workflows</li>
+          </ul>
+          <div class="sap-progress-bar">
+            <div class="sap-progress-fill sap-fill-amber" data-width="60"></div>
+          </div>
+          <div class="sap-progress-meta"><span>Completion</span><span>~60%</span></div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-label">03 — Experience</div>
-      <h2 class="section-title">Career <span class="accent">Timeline</span></h2>
-      <div class="timeline">
+  <section id="experience" class="section-apple" aria-labelledby="exp-heading">
+    <div class="apple-container">
+      <p class="apple-eyebrow">Experience</p>
+      <h2 id="exp-heading" class="apple-headline">8 years.<br/><em>Four companies. One focus.</em></h2>
 
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Mar 2025 — Present</div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3>SAP Project Manager — Production Operations &amp; Quality</h3>
-              <span class="timeline-company">Isar Aerospace SE · Ottobrunn, Germany</span>
-              <div class="timeline-tags">
-                <span class="timeline-tag">ERP Product Owner</span>
-                <span class="timeline-tag">SAP S/4HANA</span>
-              </div>
+      <div class="timeline-apple">
+
+        <article class="tl-item" itemscope itemtype="https://schema.org/WorkExperience">
+          <div class="tl-aside">
+            <time class="tl-date">Mar 2025 — Present</time>
+            <div class="tl-company-logo" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
-            <ul class="timeline-bullets">
-              <li>Leading end-to-end SAP S/4HANA (MM, EWM, PP) implementation across production, inventory, and procurement — <strong>MM and EWM delivered to go-live</strong>, PP currently in active rollout.</li>
+          </div>
+          <div class="tl-body">
+            <div class="tl-tags">
+              <span class="tl-tag tl-tag-current">Current Role</span>
+              <span class="tl-tag">Munich Area</span>
+            </div>
+            <h3 itemprop="title">SAP Project Manager</h3>
+            <p class="tl-org" itemprop="name">Isar Aerospace SE · Ottobrunn, Germany</p>
+            <p class="tl-dept">Production Operations &amp; Quality</p>
+            <ul class="tl-bullets">
+              <li>Leading end-to-end SAP S/4HANA implementation — <strong>MM and EWM delivered to go-live</strong>, PP module in active rollout. Full product lifecycle from process analysis to post-implementation adoption.</li>
               <li>Acting as <strong>ERP Product Owner</strong>: managing product backlog, sprint acceptance criteria, and coordinating offshore implementation team within a €200K annual budget.</li>
-              <li>Architected a PLM/PDM to S/4HANA integration through deep-dive standardisation workshops — achieving <strong>98% data fidelity</strong> and eliminating critical operational errors.</li>
-              <li>Engaging 5+ cross-functional leaders across production, quality, procurement, and engineering to manage scope across <strong>4 concurrent transformation initiatives</strong>.</li>
-              <li>Delivering executive Power BI and EazyBI dashboards for steering committee reporting — milestone tracking, budget burn-down, and sprint velocity in real-time.</li>
+              <li>Architected PLM/PDM to S/4HANA integration through deep-dive standardisation workshops — achieving <strong>98% data fidelity</strong> and eliminating critical operational errors.</li>
+              <li>Engaging 5+ C-level and functional leaders across production, quality, procurement, and engineering across <strong>4 concurrent transformation programmes</strong>.</li>
+              <li>Executive Power BI &amp; EazyBI dashboards for steering committee reporting — milestone tracking, budget burn-down, and sprint velocity in real-time.</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Jul 2021 — Mar 2025</div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3>Supply Chain Management Specialist</h3>
-              <span class="timeline-company">Isar Aerospace SE · Ottobrunn, Germany</span>
-              <div class="timeline-tags">
-                <span class="timeline-tag">Aerospace SCM</span>
-                <span class="timeline-tag">ERP Rollout</span>
-              </div>
+        <article class="tl-item">
+          <div class="tl-aside">
+            <time class="tl-date">Jul 2021 — Mar 2025</time>
+            <div class="tl-company-logo" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
-            <ul class="timeline-bullets">
-              <li>Spearheaded the <strong>global rollout of an enterprise inventory management system</strong>, standardising processes and integrating MES and PDM architectures organisation-wide.</li>
-              <li>Led strategic procurement for complex aerospace hardware (engine and launch vehicle components) — executing vendor evaluations and contract negotiations across the DACH region.</li>
-              <li>Built advanced <strong>Power BI analytics dashboards</strong> to surface supply chain bottlenecks and transform unstructured logistics into a standardised, measurable framework.</li>
-              <li>Coordinated cross-functional teams across production, logistics, and quality for high-criticality aerospace manufacturing programmes.</li>
+          </div>
+          <div class="tl-body">
+            <div class="tl-tags">
+              <span class="tl-tag">Munich Area</span>
+              <span class="tl-tag">Aerospace</span>
+            </div>
+            <h3>Supply Chain Management Specialist</h3>
+            <p class="tl-org">Isar Aerospace SE · Ottobrunn, Germany</p>
+            <ul class="tl-bullets">
+              <li>Spearheaded the <strong>global rollout of an enterprise inventory management system</strong>, integrating MES and PDM architectures organisation-wide.</li>
+              <li>Led strategic procurement for complex aerospace hardware — engine and launch vehicle components — executing vendor evaluations across the DACH region.</li>
+              <li>Built advanced <strong>Power BI analytics dashboards</strong> to surface supply chain bottlenecks and transform unstructured logistics into a measurable framework.</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Feb 2020 — Jul 2020</div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3>Purchasing Intern — Global Logistics Services</h3>
-              <span class="timeline-company">Robert Bosch GmbH · Stuttgart, Germany</span>
+        <article class="tl-item">
+          <div class="tl-aside">
+            <time class="tl-date">Feb 2020 — Jul 2020</time>
+            <div class="tl-company-logo" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
-            <ul class="timeline-bullets">
-              <li>Analysed complex logistics spend and volume data to baseline vendor performance, identifying bottlenecks and driving collaborative improvement initiatives.</li>
-              <li>Acquired and onboarded <strong>5+ logistics service providers</strong>, managing the full lead pipeline in a global procurement environment.</li>
+          </div>
+          <div class="tl-body">
+            <div class="tl-tags">
+              <span class="tl-tag">Stuttgart</span>
+              <span class="tl-tag">Global Logistics</span>
+            </div>
+            <h3>Purchasing Intern — Global Logistics Services</h3>
+            <p class="tl-org">Robert Bosch GmbH · Stuttgart, Germany</p>
+            <ul class="tl-bullets">
+              <li>Analysed complex logistics spend data to baseline vendor performance and drive collaborative improvement initiatives.</li>
+              <li>Acquired and onboarded <strong>5+ logistics service providers</strong>, managing the full procurement pipeline.</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="timeline-item" data-animate>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Jul 2016 — Jul 2018</div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <h3>Buyer II — Procurement Operations</h3>
-              <span class="timeline-company">Lam Research India Pvt. Ltd. · Bengaluru, India</span>
+        <article class="tl-item">
+          <div class="tl-aside">
+            <time class="tl-date">Jul 2016 — Jul 2018</time>
+            <div class="tl-company-logo" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
             </div>
-            <ul class="timeline-bullets">
-              <li>Directed procurement for Etch and Deposition product lines, overseeing a portfolio of <strong>20+ strategic suppliers</strong> to guarantee zero-downtime manufacturing.</li>
-              <li>Led a targeted process optimisation project standardising inbound workflows and significantly reducing wafer manufacturing receiving variances.</li>
-              <li>Optimised ERP master data to proactively prevent material shortages and improve supply chain reliability.</li>
+          </div>
+          <div class="tl-body">
+            <div class="tl-tags">
+              <span class="tl-tag">Bengaluru</span>
+              <span class="tl-tag">Semiconductor</span>
+            </div>
+            <h3>Buyer II — Procurement Operations</h3>
+            <p class="tl-org">Lam Research India Pvt. Ltd. · Bengaluru, India</p>
+            <ul class="tl-bullets">
+              <li>Directed procurement for Etch and Deposition product lines — <strong>20+ strategic suppliers</strong>, zero-downtime manufacturing.</li>
+              <li>Led process optimisation standardising inbound workflows, significantly reducing wafer manufacturing receiving variances.</li>
             </ul>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section section-dark">
-    <div class="container">
-      <div class="section-label">04 — Skills</div>
-      <h2 class="section-title">Technical <span class="accent">Expertise</span></h2>
-      <div class="skills-grid">
+  <section id="skills" class="section-apple section-gray" aria-labelledby="skills-heading">
+    <div class="apple-container">
+      <p class="apple-eyebrow">Skills</p>
+      <h2 id="skills-heading" class="apple-headline">Built for<br/><em>complex transformation.</em></h2>
 
-        <div class="skill-card" data-animate>
-          <div class="skill-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17V7m0 10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10V7m0 10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2"/></svg>
+      <div class="skills-apple-grid">
+
+        <div class="skill-apple-card" data-animate>
+          <div class="skill-apple-icon skill-icon-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17V7m0 10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m0 10V7"/></svg>
           </div>
           <h3>Project Management</h3>
-          <div class="skill-tags">
-            <span>SAP Activate</span>
-            <span>Agile / Waterfall</span>
-            <span>Scope Management</span>
-            <span>Budget Control</span>
-            <span>Risk Management</span>
-            <span>IT Vendor Management</span>
-            <span>Solution Design</span>
+          <p>End-to-end project lifecycle from scoping to go-live — Agile, Waterfall, and SAP Activate methodologies.</p>
+          <div class="skill-chips">
+            <span>SAP Activate</span><span>Agile / Scrum</span><span>Waterfall</span>
+            <span>Scope &amp; Budget</span><span>Risk Management</span><span>Vendor Management</span>
           </div>
         </div>
 
-        <div class="skill-card" data-animate>
-          <div class="skill-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        <div class="skill-apple-card" data-animate>
+          <div class="skill-apple-icon skill-icon-sap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
           </div>
-          <h3>SAP Systems</h3>
-          <div class="skill-tags">
-            <span>SAP S/4HANA</span>
-            <span>MM</span>
-            <span>EWM</span>
-            <span>PP</span>
-            <span>SAP Ariba</span>
-            <span>SAP Signavio</span>
-            <span>PLM/PDM Integration</span>
-            <span>MES Architecture</span>
+          <h3>SAP Expertise</h3>
+          <p>Deep hands-on knowledge across S/4HANA modules — from blueprint to go-live and post-implementation support.</p>
+          <div class="skill-chips">
+            <span>S/4HANA</span><span>MM</span><span>EWM</span><span>PP</span>
+            <span>SAP Ariba</span><span>SAP Signavio</span><span>PLM/PDM</span><span>MES</span>
           </div>
         </div>
 
-        <div class="skill-card" data-animate>
-          <div class="skill-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="skill-apple-card" data-animate>
+          <div class="skill-apple-icon skill-icon-bi">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <h3>Business Intelligence</h3>
-          <div class="skill-tags">
-            <span>Power BI</span>
-            <span>EazyBI</span>
-            <span>DAX</span>
-            <span>Python</span>
-            <span>JQL</span>
+          <p>Executive dashboards and data-driven reporting — turning raw SAP data into steering-committee-ready insights.</p>
+          <div class="skill-chips">
+            <span>Power BI</span><span>EazyBI</span><span>DAX</span><span>Python</span><span>JQL</span>
           </div>
         </div>
 
-        <div class="skill-card" data-animate>
-          <div class="skill-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <div class="skill-apple-card" data-animate>
+          <div class="skill-apple-icon skill-icon-tools">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Tools &amp; Platforms</h3>
-          <div class="skill-tags">
-            <span>Jira</span>
-            <span>Confluence</span>
-            <span>MS Project</span>
-            <span>Microsoft 365</span>
-            <span>Linux</span>
-            <span>Windows</span>
-            <span>macOS</span>
+          <p>Industry-standard project and collaboration tools for distributed, cross-functional team delivery.</p>
+          <div class="skill-chips">
+            <span>Jira</span><span>Confluence</span><span>MS Project</span>
+            <span>Microsoft 365</span><span>Linux</span><span>macOS</span>
           </div>
         </div>
 
@@ -429,77 +585,109 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="section">
-    <div class="container">
-      <div class="section-label">05 — Education</div>
-      <h2 class="section-title">Academic <span class="accent">Background</span></h2>
-      <div class="edu-grid">
+  <section id="education" class="section-apple" aria-labelledby="edu-heading">
+    <div class="apple-container">
+      <p class="apple-eyebrow">Education</p>
+      <h2 id="edu-heading" class="apple-headline">Engineering meets<br/><em>management.</em></h2>
 
-        <div class="edu-card" data-animate>
-          <div class="edu-year">2018 — 2022</div>
-          <div class="edu-body">
-            <span class="edu-degree">M.Sc. Production Systems Engineering</span>
-            <span class="edu-school">RWTH Aachen University · Aachen, Germany</span>
-            <p class="edu-thesis"><strong>Thesis:</strong> Methodology for process selection in the application of process mining within order processing</p>
-            <div class="edu-focus">
-              <span>Production Management</span>
-              <span>Systems Engineering</span>
-              <span>Industrial Digitalisation</span>
-            </div>
-          </div>
-        </div>
+      <div class="edu-apple-grid">
 
-        <div class="edu-card" data-animate>
-          <div class="edu-year">2012 — 2017</div>
-          <div class="edu-body">
-            <span class="edu-degree">B.E. Industrial Engineering &amp; Management</span>
-            <span class="edu-school">SIT Tumakuru (VTU) · Tumakuru, India</span>
-            <p class="edu-thesis"><strong>Thesis:</strong> Implementation of Kanban for Minomi Parts Supply (Toyota)</p>
-            <p class="edu-note">Top 10 in graduating class of 2016</p>
+        <article class="edu-apple-card" data-animate itemscope itemtype="https://schema.org/EducationalOccupationalProgram">
+          <div class="edu-apple-year">2018 — 2022</div>
+          <div class="edu-apple-logo" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
-        </div>
+          <h3 itemprop="name">M.Sc. Production Systems Engineering</h3>
+          <p class="edu-school" itemprop="provider">RWTH Aachen University · Germany</p>
+          <p class="edu-thesis">Thesis: Methodology for process selection in the application of process mining within order processing</p>
+          <div class="edu-chips">
+            <span>Production Management</span>
+            <span>Systems Engineering</span>
+            <span>Industrial Digitalisation</span>
+          </div>
+        </article>
+
+        <article class="edu-apple-card" data-animate>
+          <div class="edu-apple-year">2012 — 2017</div>
+          <div class="edu-apple-logo" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>B.E. Industrial Engineering &amp; Management</h3>
+          <p class="edu-school">SIT Tumakuru (VTU) · India</p>
+          <p class="edu-thesis">Thesis: Implementation of Kanban for Minomi Parts Supply (Toyota)</p>
+          <div class="edu-chips">
+            <span>Top 10 of Graduating Class 2016</span>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-dark">
-    <div class="container contact-container">
-      <div class="section-label">06 — Contact</div>
-      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
-      <p class="contact-sub">Open to SAP project management and ERP transformation opportunities globally. Reach out via LinkedIn or explore my work on GitHub.</p>
-      <div class="contact-cards">
-        <a href="https://www.linkedin.com/in/nagarjunkogaravallisathyanarayana" target="_blank" rel="noopener" class="contact-card">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  <section id="contact" class="section-apple section-dark-apple" aria-labelledby="contact-heading">
+    <div class="apple-container contact-apple-wrap">
+      <p class="apple-eyebrow apple-eyebrow-light">Contact</p>
+      <h2 id="contact-heading" class="apple-headline apple-headline-light">Open to <em>new opportunities</em><br/>in Munich &amp; beyond.</h2>
+      <p class="contact-apple-sub">Available for SAP project management, ERP transformation leadership, and Product Owner roles. Preferably Munich — open to hybrid and remote.</p>
+
+      <div class="contact-apple-cards">
+        <a href="https://www.linkedin.com/in/nagarjunkogaravallisathyanarayana" target="_blank" rel="noopener" class="contact-apple-card" aria-label="LinkedIn profile">
+          <div class="contact-apple-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
           <div>
             <strong>LinkedIn</strong>
-            <span>nagarjunkogaravallisathyanarayana</span>
+            <span>Connect &amp; Message</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
         </a>
-        <a href="https://github.com/nks648" target="_blank" rel="noopener" class="contact-card">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+
+        <a href="https://github.com/nks648" target="_blank" rel="noopener" class="contact-apple-card" aria-label="GitHub profile">
+          <div class="contact-apple-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </div>
           <div>
             <strong>GitHub</strong>
-            <span>github.com/nks648</span>
+            <span>View Projects</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+
+        <a href="NKS_Resume.pdf" download="Nagarjun_KS_Resume.pdf" class="contact-apple-card" aria-label="Download resume">
+          <div class="contact-apple-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div>
+            <strong>Resume</strong>
+            <span>Download PDF</span>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
         </a>
       </div>
-      <div class="languages">
-        <span class="lang"><span class="lang-dot lang-native"></span> English — Native</span>
-        <span class="lang"><span class="lang-dot lang-b1"></span> German — B1 Intermediate</span>
+
+      <div class="contact-languages">
+        <div class="lang-item">
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+          <span>English — Native</span>
+        </div>
+        <div class="lang-item">
+          <div class="lang-bar"><div class="lang-fill lang-fill-partial" style="width:55%"></div></div>
+          <span>German — B1 Intermediate</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <span class="nav-logo">NKS</span>
-      <span>Nagarjun Kogaravalli Sathyanarayana</span>
-      <span>Built with HTML · CSS · JS</span>
+  <footer class="footer-apple">
+    <div class="apple-container footer-apple-inner">
+      <span>© 2025 Nagarjun Kogaravalli Sathyanarayana</span>
+      <span class="footer-loc">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Munich, Germany
+      </span>
+      <span>SAP Project Manager · PMP®</span>
     </div>
   </footer>
 
