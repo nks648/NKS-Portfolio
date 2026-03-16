@@ -1087,7 +1087,6 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 16px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -1099,7 +1098,8 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 24px;
-  min-width: 220px;
+  flex: 1;
+  max-width: 260px;
   transition: all var(--transition);
 }
 
@@ -1127,20 +1127,6 @@ img { display: block; max-width: 100%; }
 .contact-card span {
   font-size: 0.78rem;
   color: var(--text-muted);
-}
-
-.contact-arrow {
-  margin-left: auto;
-  color: var(--accent);
-  font-size: 1.1rem;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all var(--transition);
-}
-
-.contact-card:hover .contact-arrow {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .languages {
@@ -1224,8 +1210,7 @@ footer span {
 
   .timeline { padding-left: 24px; }
 
-  .contact-cards { flex-direction: column; align-items: center; }
-  .contact-card { width: 100%; max-width: 320px; }
+  .contact-card { padding: 16px 18px; }
 
   .scroll-hint { display: none; }
 
