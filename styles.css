@@ -230,11 +230,11 @@ img { display: block; max-width: 100%; }
 
 .hero-photo-ring {
   position: absolute;
-  inset: -12px;
+  inset: -5px;
   border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--accent), var(--accent-2), transparent, var(--accent));
+  background: conic-gradient(from 0deg, #f97316, #fb923c, #fdba74, transparent, transparent, #f97316);
   animation: spin 6s linear infinite;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 @keyframes spin {
