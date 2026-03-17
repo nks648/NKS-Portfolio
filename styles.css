@@ -673,13 +673,17 @@ img { display: block; max-width: 100%; }
 }
 
 .cert-arrow {
+  display: block;
   width: 16px;
   height: 16px;
+  min-width: 16px;
+  max-width: 16px;
   flex-shrink: 0;
   margin-left: auto;
   color: var(--text-dim);
   transition: color var(--transition), transform var(--transition);
   margin-top: 2px;
+  overflow: hidden;
 }
 
 .cert-list li:hover .cert-arrow {
