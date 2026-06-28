@@ -130,11 +130,12 @@ if (backToTop) {
 // ================================
 // Add photos to the /photos/ folder and list them here:
 const GALLERY_PHOTOS = [
-  { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: '' },
-  { src: 'photos/IMG_0803.jpeg', caption: '' },
-  { src: 'photos/IMG_5738.jpeg', caption: '' },
-  { src: 'photos/IMG_7858.jpeg', caption: '' },
-  { src: 'photos/IMG_9552.jpeg', caption: '' },
+  { src: 'photos/ewm_masterdata_workshop.jpg', caption: 'SAP EWM Master Data Workshop · Isar Aerospace, Ottobrunn', alt: 'SAP EWM Master Data workshop with the cross-functional team at Isar Aerospace' },
+  { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: '', alt: 'Gallery photo' },
+  { src: 'photos/IMG_0803.jpeg', caption: '', alt: 'Gallery photo' },
+  { src: 'photos/IMG_5738.jpeg', caption: '', alt: 'Gallery photo' },
+  { src: 'photos/IMG_7858.jpeg', caption: '', alt: 'Gallery photo' },
+  { src: 'photos/IMG_9552.jpeg', caption: '', alt: 'Gallery photo' },
 ];
 
 // Placeholder cards shown until real photos are added
@@ -165,7 +166,8 @@ const CF_PLACEHOLDERS = [
     if (photos) {
       const img = document.createElement('img');
       img.src = photos[i].src;
-      img.alt = photos[i].caption || 'Gallery photo ' + (i + 1);
+      img.alt = photos[i].alt || photos[i].caption || 'Gallery photo ' + (i + 1);
+      img.loading = i === 0 ? 'eager' : 'lazy';
       img.draggable = false;
       card.appendChild(img);
     } else {
@@ -241,8 +243,10 @@ const CF_PLACEHOLDERS = [
     positionCards();
   }
 
-  document.getElementById('cfPrev').addEventListener('click', () => goTo(active - 1));
-  document.getElementById('cfNext').addEventListener('click', () => goTo(active + 1));
+  const cfPrev = document.getElementById('cfPrev');
+  const cfNext = document.getElementById('cfNext');
+  if (cfPrev) cfPrev.addEventListener('click', () => goTo(active - 1));
+  if (cfNext) cfNext.addEventListener('click', () => goTo(active + 1));
 
   // Keyboard
   document.addEventListener('keydown', e => {
