@@ -129,8 +129,10 @@ if (backToTop) {
 // PHOTO GALLERY — COVER FLOW
 // ================================
 // Add photos to the /photos/ folder and list them here:
+// To add the workshop photo: save it as photos/ewm_masterdata_workshop.jpg
+// then uncomment the line below:
+// { src: 'photos/ewm_masterdata_workshop.jpg', caption: 'SAP EWM Master Data Workshop · Isar Aerospace, Ottobrunn', alt: 'SAP EWM Master Data workshop with the cross-functional team at Isar Aerospace' },
 const GALLERY_PHOTOS = [
-  { src: 'photos/ewm_masterdata_workshop.jpg', caption: 'SAP EWM Master Data Workshop · Isar Aerospace, Ottobrunn', alt: 'SAP EWM Master Data workshop with the cross-functional team at Isar Aerospace' },
   { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: '', alt: 'Gallery photo' },
   { src: 'photos/IMG_0803.jpeg', caption: '', alt: 'Gallery photo' },
   { src: 'photos/IMG_5738.jpeg', caption: '', alt: 'Gallery photo' },
@@ -169,6 +171,7 @@ const CF_PLACEHOLDERS = [
       img.alt = photos[i].alt || photos[i].caption || 'Gallery photo ' + (i + 1);
       img.loading = i === 0 ? 'eager' : 'lazy';
       img.draggable = false;
+      img.onerror = () => { card.style.display = 'none'; };
       card.appendChild(img);
     } else {
       const ph = CF_PLACEHOLDERS[i % CF_PLACEHOLDERS.length];
