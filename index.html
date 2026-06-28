@@ -132,7 +132,7 @@
         <div class="about-text">
           <h2 class="section-title">Turning complex IT transformations into <span class="accent">measurable outcomes</span></h2>
           <p>PMP® certified SAP Project Manager with over 8 years delivering end-to-end ERP transformations across aerospace and high-tech manufacturing. I bridge the gap between business process design and technical delivery — owning the full SAP S/4HANA lifecycle from requirements to post-go-live adoption.</p>
-          <p>Currently leading production operations transformation at <strong>Isar Aerospace SE</strong> as ERP Product Owner, where I've driven MM to successful go-live and completed EWM Phase 1 (warehouse structure &amp; master data) — now steering EWM Phase 2 (T4s connection) and full PP implementation, all within a €200K annual budget, managing an offshore team and 5+ executive stakeholders.</p>
+          <p>Currently leading production operations transformation at <strong>Isar Aerospace SE</strong> as ERP Product Owner — MM live, EWM Phase 1 stabilised (milk-run logistics, Kanban, MES integration), with two active Phase 2 streams: new facility EWM setup and T4S master data integration. Steering PP in parallel, all within a €200K annual budget managing an offshore team and 5+ executive stakeholders.</p>
           <div class="about-stats">
             <div class="stat">
               <span class="stat-num">8+</span>
@@ -226,9 +226,10 @@
     <div class="container">
       <div class="section-label">02 — SAP S/4HANA Implementation</div>
       <h2 class="section-title">Live Implementation <span class="accent">Status</span></h2>
-      <p class="tracker-intro">Currently leading the full SAP S/4HANA rollout at Isar Aerospace SE across three core modules. MM is live, EWM Phase 1 is complete with Phase 2 (T4s connection) in active development, and PP is in parallel rollout.</p>
+      <p class="tracker-intro">Full SAP S/4HANA rollout at Isar Aerospace SE — MM live, EWM Phase 1 stabilised with two active Phase 2 streams (new facility + T4S integration), and PP in parallel rollout.</p>
       <div class="sap-modules">
 
+        <!-- MM -->
         <div class="sap-card sap-done" data-animate>
           <div class="sap-status-bar"></div>
           <div class="sap-card-inner">
@@ -240,7 +241,7 @@
               </span>
             </div>
             <h3>Materials Management</h3>
-            <p>Full end-to-end MM implementation delivered — covering procurement workflows, purchase order management, goods receipt, invoice verification, and inventory valuation. PLM/PDM integration achieving 98% data fidelity.</p>
+            <p>Full end-to-end MM implementation delivered — procurement workflows, purchase order management, goods receipt, invoice verification, and inventory valuation live. PLM/PDM integration achieving 98% data fidelity.</p>
             <div class="sap-highlights">
               <span>Procurement Workflows</span>
               <span>Inventory Valuation</span>
@@ -254,31 +255,34 @@
           </div>
         </div>
 
-        <div class="sap-card sap-ongoing" data-animate>
+        <!-- EWM Phase 1 — Stabilisation -->
+        <div class="sap-card sap-done" data-animate>
           <div class="sap-status-bar"></div>
           <div class="sap-card-inner">
             <div class="sap-header">
               <div class="sap-module-code">EWM</div>
-              <span class="sap-badge sap-badge-ongoing">
-                <span class="sap-pulse"></span>
-                Phase 2 Active
+              <span class="sap-badge sap-badge-done">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
+                Phase 1 Stable
               </span>
             </div>
-            <h3>Extended Warehouse Management</h3>
-            <p>Phase 1 complete — warehouse structure, storage types, transfer orders, goods movement, and master data all live. Phase 2 now in active development: master data extension and T4s system connection being configured and integrated.</p>
+            <h3>EWM — Phase 1: Optimisation &amp; Stabilisation</h3>
+            <p>Core warehouse live and operationally stable. Phase 1 focus is now on process optimisation — embedding scheduled milk-run replenishment routes for line-side supply, refining Kanban loops, tuning put-away and stock removal strategies, and embedding lean flow principles across the facility.</p>
             <div class="sap-highlights">
-              <span>Phase 1 Live</span>
-              <span>Master Data</span>
-              <span>T4s Connection</span>
+              <span>Milk-Run Logistics</span>
+              <span>Kanban Replenishment</span>
+              <span>Transfer Orders</span>
               <span>MES Integration</span>
+              <span>Process Optimisation</span>
             </div>
             <div class="sap-progress-wrap">
-              <div class="sap-progress-label"><span>Phase 2 Progress</span><span>~65%</span></div>
-              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="65"></div></div>
+              <div class="sap-progress-label"><span>Phase 1 Progress</span><span>100%</span></div>
+              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="100"></div></div>
             </div>
           </div>
         </div>
 
+        <!-- PP -->
         <div class="sap-card sap-ongoing" data-animate>
           <div class="sap-status-bar"></div>
           <div class="sap-card-inner">
@@ -300,6 +304,60 @@
             <div class="sap-progress-wrap">
               <div class="sap-progress-label"><span>Implementation Progress</span><span>~60%</span></div>
               <div class="sap-progress-track"><div class="sap-progress-fill" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EWM Phase 2 — New Facility -->
+        <div class="sap-card sap-ongoing" data-animate>
+          <div class="sap-status-bar"></div>
+          <div class="sap-card-inner">
+            <div class="sap-header">
+              <div class="sap-module-code">EWM</div>
+              <span class="sap-badge sap-badge-ongoing">
+                <span class="sap-pulse"></span>
+                Phase 2 Active
+              </span>
+            </div>
+            <h3>EWM — Phase 2: New Facility Setup</h3>
+            <p>Extending the EWM landscape to a second warehouse facility. Configuring an entirely new warehouse structure — storage types, sections, bins, activity areas, and work centres — tailored to the new site's layout and material flow. Inbound/outbound processes, put-away strategies, and transfer order routing all being defined from the ground up for the new facility.</p>
+            <div class="sap-highlights">
+              <span>New Warehouse Structure</span>
+              <span>Storage Type Config</span>
+              <span>Bin Management</span>
+              <span>Activity Areas</span>
+              <span>Put-Away Strategies</span>
+            </div>
+            <div class="sap-progress-wrap">
+              <div class="sap-progress-label"><span>Phase 2 Progress</span><span>~30%</span></div>
+              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="30"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Data & T4S Connection -->
+        <div class="sap-card sap-ongoing" data-animate>
+          <div class="sap-status-bar"></div>
+          <div class="sap-card-inner">
+            <div class="sap-header">
+              <div class="sap-module-code">T4S</div>
+              <span class="sap-badge sap-badge-ongoing">
+                <span class="sap-pulse"></span>
+                In Development
+              </span>
+            </div>
+            <h3>Master Data &amp; T4S Integration</h3>
+            <p>T4S (Transfer to S/4HANA) is the qRFC-based queue infrastructure that enables external shop-floor systems, warehouse automation, and MES controllers to transmit data bidirectionally into SAP EWM. This phase focuses on aligning master data — materials, storage bins, handling units, and batch records — across the T4S interface boundary, ensuring both SAP and the external systems operate on a validated, consistent data foundation. Interface mapping, queue scheduling, and end-to-end data validation are in active configuration.</p>
+            <div class="sap-highlights">
+              <span>qRFC Queue Setup</span>
+              <span>Material Master Sync</span>
+              <span>Storage Bin Mapping</span>
+              <span>Handling Unit Data</span>
+              <span>Interface Validation</span>
+            </div>
+            <div class="sap-progress-wrap">
+              <div class="sap-progress-label"><span>Integration Progress</span><span>~40%</span></div>
+              <div class="sap-progress-track"><div class="sap-progress-fill" data-width="40"></div></div>
             </div>
           </div>
         </div>
@@ -328,7 +386,7 @@
               </div>
             </div>
             <ul class="timeline-bullets">
-              <li>Leading end-to-end SAP S/4HANA (MM, EWM, PP) implementation — <strong>MM delivered to go-live</strong>, EWM Phase 1 &amp; master data complete with <strong>Phase 2 (T4s connection) in active development</strong>, PP in parallel rollout.</li>
+              <li>Leading end-to-end SAP S/4HANA (MM, EWM, PP) rollout — <strong>MM live</strong>, EWM Phase 1 stabilised (milk-run, Kanban, MES integration), <strong>Phase 2 active across new facility setup and T4S master data integration</strong>, PP in parallel rollout.</li>
               <li>Acting as <strong>ERP Product Owner</strong>: managing product backlog, sprint acceptance criteria, and coordinating offshore implementation team within a €200K annual budget.</li>
               <li>Architected a PLM/PDM to S/4HANA integration through deep-dive standardisation workshops — achieving <strong>98% data fidelity</strong> and eliminating critical operational errors.</li>
               <li>Engaging 5+ cross-functional leaders across production, quality, procurement, and engineering to manage scope across <strong>4 concurrent transformation initiatives</strong>.</li>
