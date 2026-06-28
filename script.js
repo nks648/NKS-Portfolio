@@ -132,7 +132,10 @@ if (backToTop) {
 const GALLERY_PHOTOS = [
   { src: 'photos/IMG_3500.jpeg',                              caption: 'SAP EWM Project Closure · Isar Aerospace',          alt: 'SAP EWM project closure milestone at Isar Aerospace' },
   { src: 'photos/ea046619-db3c-4e4d-a93d-3ae1c9ff8cb0.jpeg', caption: 'SAP Hypergrowth Catalyst Program · For Startups',   alt: 'SAP for Startups Hypergrowth Catalyst Program event' },
-  { src: 'photos/With S2 of LV01.jpeg',                      caption: 'With S2 of Isar Aerospace LV01',                    alt: 'With the second stage of Isar Aerospace LV01' },
+  { src: 'photos/LV01 in flight.jpeg',                        caption: 'LV01 in Flight · Isar Aerospace',                   alt: 'Isar Aerospace LV01 launch vehicle in flight' },
+  { src: 'photos/Mission patch.jpeg',                         caption: 'Mission Patch · Isar Aerospace',                    alt: 'Isar Aerospace mission patch' },
+  { src: 'photos/With S2 of LV01.jpeg',                      caption: 'With S2 of LV01 · Isar Aerospace',                  alt: 'With the second stage of Isar Aerospace LV01' },
+  { src: 'photos/Early days with model.jpeg',                 caption: 'Early Days at Isar Aerospace',                      alt: 'Early days at Isar Aerospace with a rocket model' },
 ];
 
 // Placeholder cards shown until real photos are added
