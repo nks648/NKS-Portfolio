@@ -259,27 +259,76 @@ const CF_PLACEHOLDERS = [
     if (e.key === 'ArrowRight') goTo(active + 1);
   });
 
+  // Velocity tracking — Apple HIG: project momentum, don't just threshold
+  let pointerHistory = [];
+  function trackPointer(x) {
+    const now = performance.now();
+    pointerHistory.push({ x, t: now });
+    // Keep only the last 80 ms of history
+    pointerHistory = pointerHistory.filter(p => now - p.t < 80);
+  }
+  function releaseVelocity() {
+    if (pointerHistory.length < 2) return 0;
+    const a = pointerHistory[0], b = pointerHistory[pointerHistory.length - 1];
+    const dt = b.t - a.t;
+    return dt > 0 ? (b.x - a.x) / dt : 0; // px/ms
+  }
+  // Project momentum (Apple's exponential-decay formula, d ≈ 0.998)
+  function projectMomentum(v_pxPerMs) {
+    const v = v_pxPerMs * 1000; // px/s
+    const d = 0.998;
+    return (v / 1000) * d / (1 - d);
+  }
+  function flickGoTo(dragDelta) {
+    const v = releaseVelocity(); // px/ms (positive = rightward)
+    const projection = projectMomentum(v); // px
+    const effective = dragDelta + projection * 0.25;
+    const CARD_WIDTH = 220;
+    // How many cards to advance: use momentum for multi-card flicks, cap at 2
+    const cards = Math.round(-effective / CARD_WIDTH);
+    const delta = Math.sign(-effective) * Math.max(1, Math.min(2, Math.abs(cards)));
+    // Flick threshold: commit if displacement > 40px OR velocity > 0.4 px/ms
+    if (Math.abs(effective) > 40 || Math.abs(v) > 0.4) goTo(active + delta);
+    pointerHistory = [];
+  }
+
   // Mouse drag
   let dragStartX = null, dragDelta = 0;
-  const THRESHOLD = 50;
 
-  stage.addEventListener('mousedown', e => { dragStartX = e.clientX; dragDelta = 0; stage.classList.add('dragging'); });
-  document.addEventListener('mousemove', e => { if (dragStartX !== null) dragDelta = e.clientX - dragStartX; });
+  stage.addEventListener('mousedown', e => {
+    dragStartX = e.clientX; dragDelta = 0;
+    pointerHistory = []; trackPointer(e.clientX);
+    stage.classList.add('dragging');
+  });
+  document.addEventListener('mousemove', e => {
+    if (dragStartX === null) return;
+    dragDelta = e.clientX - dragStartX;
+    trackPointer(e.clientX);
+  });
   document.addEventListener('mouseup', () => {
     if (dragStartX === null) return;
     stage.classList.remove('dragging');
-    if (Math.abs(dragDelta) > THRESHOLD) goTo(active + (dragDelta < 0 ? 1 : -1));
+    flickGoTo(dragDelta);
     dragStartX = null; dragDelta = 0;
   });
 
-  // Touch swipe
-  let touchStartX = null;
-  stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  // Touch swipe — same velocity-aware logic
+  let touchStartX = null, touchDelta = 0;
+  stage.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchDelta = 0; pointerHistory = [];
+    trackPointer(touchStartX);
+  }, { passive: true });
+  stage.addEventListener('touchmove', e => {
+    if (touchStartX === null) return;
+    touchDelta = e.touches[0].clientX - touchStartX;
+    trackPointer(e.touches[0].clientX);
+  }, { passive: true });
   stage.addEventListener('touchend', e => {
     if (touchStartX === null) return;
     const delta = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(delta) > THRESHOLD) goTo(active + (delta < 0 ? 1 : -1));
-    touchStartX = null;
+    flickGoTo(delta);
+    touchStartX = null; touchDelta = 0;
   }, { passive: true });
 
   positionCards();
