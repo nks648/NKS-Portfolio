@@ -11,7 +11,8 @@ window.addEventListener('scroll', () => {
 });
 
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  const isOpen = mobileMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen);
 });
 
 mobileLinks.forEach(link => {
@@ -252,9 +253,12 @@ const CF_PLACEHOLDERS = [
   if (cfPrev) cfPrev.addEventListener('click', () => goTo(active - 1));
   if (cfNext) cfNext.addEventListener('click', () => goTo(active + 1));
 
-  // Keyboard
+  // Keyboard — only when gallery is visible in the viewport
   document.addEventListener('keydown', e => {
-    if (!document.getElementById('gallery')) return;
+    const galleryEl = document.getElementById('gallery');
+    if (!galleryEl) return;
+    const rect = galleryEl.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
     if (e.key === 'ArrowLeft') goTo(active - 1);
     if (e.key === 'ArrowRight') goTo(active + 1);
   });
@@ -313,22 +317,21 @@ const CF_PLACEHOLDERS = [
   });
 
   // Touch swipe — same velocity-aware logic
-  let touchStartX = null, touchDelta = 0;
+  let touchStartX = null;
   stage.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].clientX;
-    touchDelta = 0; pointerHistory = [];
+    pointerHistory = [];
     trackPointer(touchStartX);
   }, { passive: true });
   stage.addEventListener('touchmove', e => {
     if (touchStartX === null) return;
-    touchDelta = e.touches[0].clientX - touchStartX;
     trackPointer(e.touches[0].clientX);
   }, { passive: true });
   stage.addEventListener('touchend', e => {
     if (touchStartX === null) return;
     const delta = e.changedTouches[0].clientX - touchStartX;
     flickGoTo(delta);
-    touchStartX = null; touchDelta = 0;
+    touchStartX = null;
   }, { passive: true });
 
   positionCards();

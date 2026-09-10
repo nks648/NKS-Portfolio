@@ -191,6 +191,7 @@ img { display: block; max-width: 100%; }
 }
 
 .mobile-menu a:hover { color: #fff; background: var(--surface); }
+.mobile-menu a:active { transform: scale(0.97); opacity: 0.85; }
 
 .mobile-menu.open { display: block; }
 
@@ -264,8 +265,8 @@ img { display: block; max-width: 100%; }
     transparent 360deg
   );
   /* Show only the ring edge, not the full disc */
-  mask-image: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
-  -webkit-mask-image: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
+  mask-image: radial-gradient(circle farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
+  -webkit-mask-image: radial-gradient(circle farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
   animation: spin 6s linear infinite;
 }
 
@@ -516,6 +517,8 @@ img { display: block; max-width: 100%; }
 
 .hero-links a svg { width: 18px; height: 18px; }
 
+.hero-links a:active { transform: scale(0.92); }
+
 .hero-links a:hover {
   border-color: rgba(79, 158, 255, 0.4);
   color: var(--accent);
@@ -744,7 +747,7 @@ img { display: block; max-width: 100%; }
 .sap-card.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease, border-color var(--transition), box-shadow var(--transition);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .sap-card:hover {
@@ -779,6 +782,9 @@ img { display: block; max-width: 100%; }
 
 .sap-card-inner {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .sap-header {
@@ -1514,7 +1520,7 @@ footer span {
    RESPONSIVE
 ================================ */
 @media (max-width: 1024px) {
-  .sap-modules { grid-template-columns: 1fr; max-width: 600px; }
+  .sap-modules { grid-template-columns: 1fr; }
   .sap-modules > .sap-card,
   .sap-modules > .sap-card:nth-child(4),
   .sap-modules > .sap-card:nth-child(5) { grid-column: span 1; }
